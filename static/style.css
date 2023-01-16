@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body{
+    /* overflow-y: hidden; */
+    background-color: #5687a0;
+}
+
+h1 ,h4{
+    font-family: 'Secular One', sans-serif;
+}
+
+@media screen and (max-width:900px) {
+    .container{
+        max-width: 100%;
+        
+    }
+    form{
+        width: 90%;
+    }
+    .signform{
+        max-width: 80%;
+    }
+    
+}
+
+@media screen and (min-width:920px) {
+    .container{
+        max-width: 70%;
+        
+    }
+    form{
+        width: 60%;
+    }
+    .signform{
+        max-width: 40%;
+    }
+    
+}

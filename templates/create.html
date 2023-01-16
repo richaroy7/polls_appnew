@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container d-flex align-items-center justify-content-center" style="height:91vh;max-width:100%;">
+    
+    <form method="post" action="/create" class="border rounded shadow-lg" style="background-color: rgb(209, 238, 238);" >
+        {% csrf_token %}
+        <h3 class=" text-center my-4 mx-3 fs-3 " style="font-family: 'Secular One', sans-serif">Add a new Poll</h3>
+
+        <div class="d-flex align-items-center justify-content-center flex-column ">
+
+            <div class="mb-3" style="width:80%">
+                <label for="question" class="form-label">Question</label>
+                <input type="text" name="question" class="form-control" id="question" placeholder="Question for the poll">
+            </div>
+
+            <div class="mb-3" style="width:80%">
+                <label for="answers" class="form-label">Choices</label>
+                <div>
+                    <input type="text" name="option_one" class="form-control mb-3" id="answer1" placeholder="Option 1">
+                    <input type="text" name="option_two" class="form-control my-3" id="answer2" placeholder="Option 2">
+                    <input type="text" name="option_three" class="form-control my-3" id="answer3" placeholder="Option 3">
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between" style="width:80%">
+                <label for="deadline" class="form-label"  style="width:25%">Voting deadline</label>
+                <input type="date" name="deadline" id="deadline" class="form-control my-3">
+            </div>
+
+
+
+        <div class="d-flex align-items-center justify-content-center" >
+            <a href="/"><button type="button" class="btn btn-info mx-4 my-3"> Home</button></a>
+            <button type="submit" class="btn  btn-info mx-4 my-3">Save</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}
